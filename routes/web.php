@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Model\propertie;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +20,23 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// show result table properties Here 
+//Route::get('proper',function(){
+//$result = DB::select('select * from properties limit 10');
+
+//return $result;
+//});
+
+Route::get('rent',function(){
+    $result = propertie::where('title','للأيجار')->orderBy('id')->take(10)->get();
+    return $result;
+    });
+    
+
+
+
+
+
+
+
