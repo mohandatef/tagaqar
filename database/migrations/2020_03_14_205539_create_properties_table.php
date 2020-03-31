@@ -14,7 +14,16 @@ class CreatePropertiesTable extends Migration
     public function up()
     {
         Schema::create('properties', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('whatsapp');
+            $table->string('skype');
+            $table->string('title');
+            $table->string('description');
+            $table->string('price');
+            $table->string('map_coordinates');
+            $table->string('mobile');
+            $table->string('email');
+           
             $table->timestamps();
         });
     }
@@ -26,6 +35,6 @@ class CreatePropertiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('properties');
+        Schema::dropIfExists('propertis');
     }
 }

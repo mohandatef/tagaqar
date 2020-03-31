@@ -20,3 +20,27 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// show result table properties Here 
+//Route::get('proper',function(){
+//$result = DB::select('select * from properties limit 10');
+
+//return $result;
+//});
+
+
+// show data = keyword ايجار
+ use App\propertie;
+// Route::get('rent','properties@index'(){
+//     $find = propertie::where('title' ,'like','% للأيجار%')->orderBy('id')->take(10)->get();
+//     return $find;
+//     });
+    
+
+  Route::get('rent/{id}','properties@index');
+        
+
+
+
+
+
