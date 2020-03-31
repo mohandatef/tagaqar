@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Model\propertie;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +28,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 //return $result;
 //});
 
+<<<<<<< HEAD
 
 // show data = keyword ايجار
  use App\propertie;
@@ -39,6 +40,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 
   Route::get('rent/{id}','properties@index');
         
+=======
+Route::get('rent',function(){
+    $result = propertie::where('title','للأيجار')->orderBy('id')->take(10)->get();
+    return $result;
+    });
+    
+
+
+>>>>>>> e2cd382eb490303837818de5e6e12530c349cab6
 
 
 

@@ -1,7 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+<<<<<<< HEAD
 use App\propertie;
+=======
+
+>>>>>>> e2cd382eb490303837818de5e6e12530c349cab6
 use Illuminate\Http\Request;
 
 class properties extends Controller
@@ -11,9 +15,15 @@ class properties extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
     public function index($id)
     {
         return  propertie::where('title','like','%id%')->orderBy('id')->take(10)->get();
+=======
+    public function index()
+    {
+        //
+>>>>>>> e2cd382eb490303837818de5e6e12530c349cab6
     }
 
     /**
